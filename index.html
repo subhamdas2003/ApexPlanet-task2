@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Subham Das | Task 2 Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1>📊 Subham's Dashboard</h1>
+      <ul>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#todo">To-Do</a></li>
+        <li><button id="darkModeToggle">🌓</button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <h1>Welcome to My Productivity Dashboard 🚀</h1>
+    <p>Built with HTML, CSS & JavaScript | Task 2 - Internship at ApexPlanet</p>
+  </header>
+
+  <main class="dashboard">
+    <!-- Sidebar Stats -->
+    <aside class="sidebar">
+      <h2>📈 Stats</h2>
+      <p>Total Tasks: <span id="stat-total">0</span></p>
+      <p>Completed: <span id="stat-completed">0</span></p>
+      <p>Pending: <span id="stat-pending">0</span></p>
+    </aside>
+
+    <!-- Main Panels -->
+    <section class="content">
+      <!-- Contact Form -->
+      <section class="card" id="contact">
+        <h2>📬 Contact Me</h2>
+        <form id="contactForm">
+          <div class="form-grid">
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+          </div>
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send Message</button>
+          <div id="toast" class="toast"></div>
+        </form>
+      </section>
+
+      <!-- To-Do Section -->
+      <section class="card" id="todo">
+        <h2>📝 Task Manager</h2>
+        <div class="todo-controls">
+          <input type="text" id="todoInput" placeholder="Add a new task..." />
+          <select id="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <input type="date" id="dueDate" />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <div class="todo-filters">
+          <button onclick="filterTasks('all')">All</button>
+          <button onclick="filterTasks('completed')">Completed</button>
+          <button onclick="filterTasks('pending')">Pending</button>
+          <input type="text" id="searchBox" placeholder="Search tasks..." />
+          <button onclick="clearTasks()">Clear All</button>
+        </div>
+        <ul id="todoList"></ul>
+      </section>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Subham Das | ApexPlanet Internship - Task 2</p>
+  </footer>
+</body>
+</html>
