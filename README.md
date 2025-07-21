@@ -30,4 +30,19 @@ This is **Task 2** of my internship, where I built a fully functional and respon
 - JavaScript (Vanilla)
 
 ## 📁 Folder Structure
+index.html
+style.css
+script.js
+
+
+## 🧠 Author
+
+**Subham Das**  
+Web Development Intern @ ApexPlanet Software Pvt. Ltd.
+
+---
+
+✅ Feel free to fork or use this for learning!
+
+
 
